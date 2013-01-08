@@ -2,18 +2,14 @@
 django-markitup-filebrowser
 ===========================
 
-A Django reusable application for end-to-end markup handling. Includes:
+A Django reusable application inspired by article:
+http://www.martijngorree.nl/2010/01/django-filebrowser-and-markitup.html
 
-* Easy integration of the `MarkItUp!`_ markup editor widget (by Jay
-  Salvat) in Django projects, with server-side support for MarkItUp!'s
-  AJAX preview. Plug in MarkItUp! via form widget or template tags.
-
-* ``MarkupField``, a ``TextField`` that automatically renders and
-  stores both its raw and rendered values in the database, on the
-  assumption that disk space is cheaper than CPU cycles in a web
-  application.
+The aim is to provide simple way to insert images managed by `django-filebrowser-no-grappelli`_ to
+`MarkItUp!`_ markdown widget.
 
 .. _MarkItUp!: http://markitup.jaysalvat.com/
+.. _django-filebrowser: https://github.com/wardi/django-filebrowser-no-grappelli
 
 
 Installation
