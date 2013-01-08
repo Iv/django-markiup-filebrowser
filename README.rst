@@ -9,7 +9,7 @@ The aim is to provide simple way to insert images managed by `django-filebrowser
 `MarkItUp!`_ markdown widget.
 
 .. _MarkItUp!: http://markitup.jaysalvat.com/
-.. _django-filebrowser: https://github.com/wardi/django-filebrowser-no-grappelli
+.. _django-filebrowser-no-grappelli: https://github.com/wardi/django-filebrowser-no-grappelli
 
 
 Installation
