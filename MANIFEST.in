@@ -1,0 +1,8 @@
+include AUTHORS.rst
+include CHANGES.rst
+include LICENSE.txt
+include MANIFEST.in
+include README.rst
+include TODO.rst
+recursive-include markitup-filebrowser/templates *.html
+recursive-include markitup-filebrowser/static *.html *.css *.js *.txt *.png
