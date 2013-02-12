@@ -4,6 +4,7 @@ import posixpath
 from markitup.widgets import MarkItUpWidget
 from filebrowser.settings import URL_FILEBROWSER_MEDIA
 
+
 class MarkitUpFilebrowserWiget(MarkItUpWidget):
     def _media(self):
         media = super(MarkitUpFilebrowserWiget, self)._media()

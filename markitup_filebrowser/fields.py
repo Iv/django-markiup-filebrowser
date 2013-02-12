@@ -1,6 +1,7 @@
 from markitup.fields import MarkupField
 import widgets
 
+
 class MarkupFilebrowserFiled(MarkupField):
     def formfield(self, **kwargs):
         defaults = {'widget': widgets.MarkitUpFilebrowserWiget}
@@ -18,10 +19,15 @@ try:
     # For a normal MarkupField, the add_rendered_field attribute is
     # always True, which means no_rendered_field arg will always be
     # True in a frozen MarkupField, which is what we want.
-    add_introspection_rules(rules=[((MarkupFilebrowserFiled,),
-                                    [],
-                                    {'no_rendered_field': ('add_rendered_field',
-                                                           {})})],
-        patterns=['markitup_filebrowser\.fields\.'])
+    add_introspection_rules(
+        rules=[((MarkupFilebrowserFiled,),
+                [],
+                {'no_rendered_field': (
+                    'add_rendered_field',
+                    {},
+                )}
+                )],
+        patterns=['markitup_filebrowser\.fields\.']
+    )
 except ImportError:
     pass
