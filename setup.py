@@ -8,13 +8,6 @@ long_description = (open('README.rst').read() +
                     open('TODO.rst').read())
 
 
-def _static_files(prefix):
-    return [prefix+'/'+pattern for pattern in [
-        'markitup_filebrowser/*.*',
-        'markitup_filebrowser/templates/*.*'
-    ]]
-
-
 setup(
     name='django-markitup-filebrowser',
     version='0.0.1',
@@ -23,7 +16,7 @@ setup(
     author='Ivan Kravchenko',
     author_email='iv.kravchenko@gmail.com',
     url='http://bitbucket.org/carljm/django-markitup/',
-    packages=['markitup_filebrowser', 'markitup_filebrowser.templatetags'],
+    packages=['markitup_filebrowser'],
     classifiers=[
         'Development Status :: 1 - Development/Unstable',
         'Environment :: Web Environment',
@@ -36,6 +29,5 @@ setup(
     zip_safe=False,
     test_suite='runtests.runtests',
     tests_require='Django>=1.3',
-    package_data={'markitup_filebrowser': ['templates/markitup_filebrowser/*.html'] +
-                              _static_files('static')}
+    package_data={'markitup_filebrowser': ['static/markitup/*']}
 )
