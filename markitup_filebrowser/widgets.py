@@ -5,9 +5,9 @@ from markitup.widgets import MarkItUpWidget
 from filebrowser.settings import URL_FILEBROWSER_MEDIA
 
 
-class MarkitUpFilebrowserWiget(MarkItUpWidget):
+class MarkitUpFilebrowserWidget(MarkItUpWidget):
     def _media(self):
-        media = super(MarkitUpFilebrowserWiget, self)._media()
+        media = super(MarkitUpFilebrowserWidget, self)._media()
         media.add_js((
             absolute_url('markitup_filebrowser/sets/markdown/FilebrowserHelper.js'),
             posixpath.join(URL_FILEBROWSER_MEDIA, 'js/AddFileBrowser.js'),
@@ -17,5 +17,5 @@ class MarkitUpFilebrowserWiget(MarkItUpWidget):
     media = property(_media)
 
 
-class AdminMarkitUpFilebrowserWiget(MarkitUpFilebrowserWiget, AdminTextareaWidget):
+class AdminMarkitUpFilebrowserWidget(MarkitUpFilebrowserWidget, AdminTextareaWidget):
     pass

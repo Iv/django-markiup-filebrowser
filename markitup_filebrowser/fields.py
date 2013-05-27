@@ -2,15 +2,15 @@ from markitup.fields import MarkupField
 import widgets
 
 
-class MarkupFilebrowserFiled(MarkupField):
+class MarkupFilebrowserField(MarkupField):
     def formfield(self, **kwargs):
-        defaults = {'widget': widgets.MarkitUpFilebrowserWiget}
+        defaults = {'widget': widgets.MarkitUpFilebrowserWidget}
         defaults.update(kwargs)
-        return super(MarkupFilebrowserFiled, self).formfield(**defaults)
+        return super(MarkupFilebrowserField, self).formfield(**defaults)
 
 
 from django.contrib.admin.options import FORMFIELD_FOR_DBFIELD_DEFAULTS
-FORMFIELD_FOR_DBFIELD_DEFAULTS[MarkupFilebrowserFiled] = {'widget': widgets.AdminMarkitUpFilebrowserWiget}
+FORMFIELD_FOR_DBFIELD_DEFAULTS[MarkupFilebrowserField] = {'widget': widgets.AdminMarkitUpFilebrowserWidget}
 
 
 # allow South to handle MarkupField smoothly
@@ -20,7 +20,7 @@ try:
     # always True, which means no_rendered_field arg will always be
     # True in a frozen MarkupField, which is what we want.
     add_introspection_rules(
-        rules=[((MarkupFilebrowserFiled,),
+        rules=[((MarkupFilebrowserField,),
                 [],
                 {'no_rendered_field': (
                     'add_rendered_field',
